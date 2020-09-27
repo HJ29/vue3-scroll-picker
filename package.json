@@ -1,17 +1,23 @@
 {
   "name": "vue3-scroll-picker",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.2",
+  "private": false,
+  "description": "Vue 3 component scroll picker.",
+  "author": "hj <hjian5567@gmail.com>",
   "main": "./dist/vue3-scroll-picker.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
     "build": "vue-cli-service build --target lib --name vue3-scroll-picker ./src/main.ts",
-    "build:publish": "npm run test && npm run build && npm publish"
+    "publish": "npm publish --access public"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HJ29/vue3-scroll-picker.git"
+  },  
   "files": [
     "src",
-    "dist/vue3-scroll-picker.common.js"
+    "dist"
   ],
   "license": "MIT",
   "peerDependencies": {
