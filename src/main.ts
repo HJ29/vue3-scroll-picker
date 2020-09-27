@@ -1,4 +1,4 @@
-import { App } from 'vue';
+import { App, Plugin } from 'vue';
 import ScrollPicker from './ScrollPicker.vue'
 
 const install = (app: App) => {
@@ -7,4 +7,4 @@ const install = (app: App) => {
 
 ScrollPicker.install = install;
 
-export default ScrollPicker;
+export default ScrollPicker as unknown as Plugin;

@@ -2,6 +2,7 @@
 
 ### Demo
 [Demo](https://hj29.github.io/vue3-scroll-picker/)
+[Example Code](https://github.com/HJ29/vue3-scroll-picker/tree/master/example/src/)
 
 ### Install
 ```
@@ -12,8 +13,9 @@ npm i --save vue3-scroll-picker
 ### Register Global Component
 ```
 import { createApp } from 'vue';
-import ScrollPicker from 'vue3-scroll-picker';
 import App from './App.vue'
+import ScrollPicker from 'vue3-scroll-picker';
+import 'vue3-scroll-picker/dist/vue3-scroll-picker.css'
 
 const app = createApp(App);
 app.use(ScrollPicker);
@@ -23,6 +25,7 @@ app.mount('#app')
 ### Register Local Component
 ```
 import ScrollPicker from 'vue3-scroll-picker';
+import 'vue3-scroll-picker/dist/vue3-scroll-picker.css'
 
 export default {
   components: {
