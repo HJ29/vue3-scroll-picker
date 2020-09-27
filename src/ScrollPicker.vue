@@ -435,7 +435,7 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style>
 .row {
   display: flex;
   flex-wrap: nowrap;
