@@ -152,7 +152,7 @@ export default defineComponent({
     }
     function getMarkings(columns: ColumnPane[]) {
       return columns.map(column => {
-        const rows = [];
+        const rows: number[] = [];
         let y = 0;
         if(column.content) {
           for (let i = 0; i < column.content.children.length; i++) {
