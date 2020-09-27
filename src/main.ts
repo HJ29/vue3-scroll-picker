@@ -1,4 +1,8 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { App } from 'vue';
+import ScrollPicker from './ScrollPicker.vue'
 
-createApp(App).mount('#app')
+export default {
+  install: (app: App) => {
+    app.component('scroll-picker', ScrollPicker)
+  }
+};

@@ -1,20 +1,13 @@
 {
-  "name": "vue3-scroll-picker",
+  "name": "example",
   "version": "0.1.0",
   "private": true,
-  "main": "./dist/vue3-scroll-picker.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "lint": "vue-cli-service lint",
-    "build": "vue-cli-service build --target lib --name vue3-scroll-picker ./src/main.ts",
-    "build:publish": "npm run test && npm run build && npm publish"
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
-  "files": [
-    "src",
-    "dist/vue3-scroll-picker.common.js"
-  ],
-  "license": "MIT",
-  "peerDependencies": {
+  "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^3.0.0-0"
   },
