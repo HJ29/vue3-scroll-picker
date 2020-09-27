@@ -2,7 +2,7 @@
   "name": "vue3-scroll-picker",
   "version": "0.1.6",
   "private": false,
-  "description": "Vue 3 component scroll picker.",
+  "description": "Vue 3 scroll picker plugin.",
   "author": "hj <hjian5567@gmail.com>",
   "main": "./dist/vue3-scroll-picker.common.js",
   "scripts": {
@@ -24,6 +24,13 @@
     "core-js": "^3.6.5",
     "vue": "^3.0.0-0"
   },
+  "keywords": [
+    "vue3-scroll-picker",
+    "Vue",
+    "Vue3",
+    "picker",
+    "plugin"
+  ],
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",

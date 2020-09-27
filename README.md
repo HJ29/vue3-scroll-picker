@@ -1,11 +1,11 @@
 # vue3-scroll-picker
 
-Vue 3 scroll picker.
+Vue 3 scroll picker plugin.
 
-### Example
+### Demo
 [Demo](https://hj29.github.io/vue3-scroll-picker/)
 
-[Example Code](https://github.com/HJ29/vue3-scroll-picker/tree/master/example/src/)
+[Demo Code](https://github.com/HJ29/vue3-scroll-picker/tree/master/example/src/)
 
 ### Install
 ```
@@ -36,30 +36,6 @@ export default {
   },
 };
 ```
-
-### Props
-
-| Name                   | Type                                               | Required | Default | Notes                                                                                                                                                                                                                                                                                                |
-| ---------------------- | -------------------------------------------------- | -------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| :options               | string[][]<br>{ label: string; value: string }[][] | yes      | []      | Options use can select.<br> label value type: label as display, value to emit<br>label value example: [ [ { label: 'A1', value: 'a1' }, { label: 'A2', value: 'a2' } ], [ { label: 'B1', value: 'b1' } ] ]<br>string type: same label and value<br>string type example: [ [ 'a1', 'a2' ], [ 'b1' ] ] |
-| :valueModel \| v-model | string[]                                           | yes      | []      | Array value emit<br>Example: [ 'a2', 'b1' ]                                                                                                                                                                                                                                                          |
-| active-style           | string                                             | no       | ''      | css (change active option style)style                                                                                                                                                                                                                                                                |
-| inactive-style         | string                                             | no       | ''      | css (change inactive option style)style                                                                                                                                                                                                                                                              |
-| active-class           | string                                             | no       | ''      | css class                                                                                                                                                                                                                                                                                            |
-| inactive-class         | string                                             | no       | ''      | css class                                                                                                                                                                                                                                                                                            |
-
-### Event
-| Name               | Description                |
-| ------------------ | -------------------------- |
-| @update:modelValue | event emit when use select |
-
-### Slot
-| Name                  | prop                                                                 | Description                                                                |
-| --------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| v-slot:option         | active: boolean<br/>item: string \| { label: string; value: string } | override option card                                                       |
-| v-slot:center-overlay |                                                                      | override center active option area, able to add seperator to active area   |
-| v-slot:top-overlay    |                                                                      | override top inactive option area, able to change top gradient color       |
-| v-slot:bottom-overlay |                                                                      | override bottom inactive option area, able to change bottom gradient color |
 
 ### Example
 ```
@@ -109,9 +85,33 @@ export default defineComponent({
 </script>
 ```
 
+### Props
+
+| Name                   | Type                                               | Required | Default | Notes                                                                                                                                                                                                                                                                                                |
+| ---------------------- | -------------------------------------------------- | -------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| :options               | string[][]<br>{ label: string; value: string }[][] | yes      | []      | Options use can select.<br> label value type: label as display, value to emit<br>label value example: [ [ { label: 'A1', value: 'a1' }, { label: 'A2', value: 'a2' } ], [ { label: 'B1', value: 'b1' } ] ]<br>string type: same label and value<br>string type example: [ [ 'a1', 'a2' ], [ 'b1' ] ] |
+| :valueModel \| v-model | string[]                                           | yes      | []      | Array value emit<br>Example: [ 'a2', 'b1' ]                                                                                                                                                                                                                                                          |
+| active-style           | string                                             | no       | ''      | css (change active option style)style                                                                                                                                                                                                                                                                |
+| inactive-style         | string                                             | no       | ''      | css (change inactive option style)style                                                                                                                                                                                                                                                              |
+| active-class           | string                                             | no       | ''      | css class                                                                                                                                                                                                                                                                                            |
+| inactive-class         | string                                             | no       | ''      | css class                                                                                                                                                                                                                                                                                            |
+
+### Event
+| Name               | Description                |
+| ------------------ | -------------------------- |
+| @update:modelValue | event emit when use select |
+
+### Slot
+| Name                  | prop                                                                 | Description                                                                |
+| --------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| v-slot:option         | active: boolean<br/>item: string \| { label: string; value: string } | override option card                                                       |
+| v-slot:center-overlay |                                                                      | override center active option area, able to add seperator to active area   |
+| v-slot:top-overlay    |                                                                      | override top inactive option area, able to change top gradient color       |
+| v-slot:bottom-overlay |                                                                      | override bottom inactive option area, able to change bottom gradient color |
+
 ## Project setup
 ```
-yarn install
+yarn
 ```
 
 ### Compiles and hot-reloads for development
@@ -122,11 +122,6 @@ yarn serve
 ### Compiles and minifies for production
 ```
 yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
 ```
 
 ### Customize configuration
