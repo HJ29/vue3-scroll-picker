@@ -1,5 +1,5 @@
 <template>
-  <div class="row justify-center scroll-picker-container">
+  <div class="scroll-picker-container">
     <div class="center-overlay" :style="centerStyle">
       <slot name="center-overlay">
         <div class="center-overlay-custom"/>
@@ -436,16 +436,12 @@ export default defineComponent({
 </script>
 
 <style>
-.row {
-  display: flex;
-  flex-wrap: nowrap;
-}
-.justify-center {
-  justify-content: center;
-}
 .scroll-picker-container {
   height: 100%;
   position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 .column-container {
   position: relative;
