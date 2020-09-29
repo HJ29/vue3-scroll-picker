@@ -1,18 +1,18 @@
 <template>
   <basic></basic>
-  <advance></advance>
+  <custom></custom>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import Basic from './examples/Basic.vue'
-import Advance from './examples/Advance.vue'
+import Custom from './examples/Custom.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
     Basic,
-    Advance
+    Custom
   },
 });
 </script>

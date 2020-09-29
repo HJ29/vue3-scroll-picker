@@ -1,23 +1,24 @@
 <template>
-  <h3>Advance Example</h3 >
+  <h3>Custom Example</h3 >
   <scroll-picker 
+    style="background: white; height: 200px;"
     :options="options" 
     v-model="selections"
     inactive-style="color: lightgrey; font-size: 20px;"
-    active-style="color: red; font-size: 30px;">
+    active-style="color: grey; font-size: 30px;">
     <template v-slot:option="prop" >
-      <div style="padding: 10px 20px;">
+      <div class="custom-option">
         {{ prop.item.label }}
       </div>
     </template>
     <template v-slot:top-overlay>
-      <div class="top-overlay"></div>
+      <div class="custom-top-overlay"></div>
     </template>
     <template v-slot:bottom-overlay>
-      <div class="bottom-overlay"></div>
+      <div class="custom-bottom-overlay"></div>
     </template>
     <template v-slot:center-overlay>
-      <div class="center-overlay"></div>
+      <div class="custom-center-overlay"></div>
     </template>
   </scroll-picker>
   <div style="margin-top: 30px;">
@@ -34,31 +35,31 @@ import { defineComponent, reactive, toRefs } from 'vue';
 const mockOptions = [
   [
     {
-      label: "A1",
+      label: "A1 A1",
       value: "a1"
     },
     {
-      label: "A2",
+      label: "A2 A2",
       value: "a2"
     },
   ],
   [
     {
-      label: "B1",
+      label: "B1 B1",
       value: "b1"
     },
     {
-      label: "B2",
+      label: "B2 B2",
       value: "b2"
     },
     {
-      label: "B3",
+      label: "B3 B3",
       value: "b3"
     },
   ],
   [
     {
-      label: "C1",
+      label: "C1 ",
       value: "c1"
     },
     {
@@ -103,26 +104,35 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.center-overlay {
+.custom-center-overlay {
   height: 100%;
   border-style: solid;
   border-width: 1px 0px 1px 0px;
-  border-color: blue;
+  border-color: lightgrey;
 }
-.top-overlay {
+.custom-top-overlay {
   height: 100%;
   background: linear-gradient(
     to top,
     rgba(255, 255, 255, 0),
-    rgba(0, 0, 255, 0.2)
+    rgba(0, 0, 0, 0.1)
   );
 }
-.bottom-overlay {
+.custom-bottom-overlay {
   height: 100%;
   background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0),
-    rgba(0, 0, 255, 0.2)
+    rgba(0, 0, 0, 0.1)
   );
+}
+.custom-option {
+  padding: 10px 20px; 
+  height: 80px; 
+  width: 50px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center; 
+  align-items: center
 }
 </style>

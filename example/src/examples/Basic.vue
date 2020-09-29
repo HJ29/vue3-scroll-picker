@@ -59,20 +59,31 @@ const mockOptions = [
   ]
 ];
 
+interface Option {
+  label: string;
+  value: string;
+}
+
+interface State {
+  options: Option[][];
+  selections: string[];
+}
+
 export default defineComponent({
   name: 'Basic',
   setup() {
-    const state = reactive({
+    const state = reactive<State>({
       options: mockOptions,
-      selections: ['a2','b2','c1'],
+      selections: [],
     });
     function random(number: number) {
       return Math.floor(Math.random() * number);  
     }
-    function getValue(option) {
+    function getValue(option: Option) {
       return typeof option === "string" ? option : option.value;
     }
     function onClickRandom() {
+      state.selections
       state.selections = state.options.map(option => {
         return getValue(option[random(option.length)]);
       })
