@@ -8,13 +8,13 @@ Vue 3 scroll picker plugin.
 [Demo Code](https://github.com/HJ29/vue3-scroll-picker/tree/master/example/src/)
 
 ### Install
-```
+```bash
 yarn add vue3-scroll-picker
 npm i --save vue3-scroll-picker
 ```
 
 ### Register Global Component
-```
+```js
 import { createApp } from 'vue';
 import App from './App.vue'
 import ScrollPicker from 'vue3-scroll-picker';
@@ -25,7 +25,7 @@ app.mount('#app')
 ```
 
 ### Register Local Component
-```
+```js
 import ScrollPicker from 'vue3-scroll-picker';
 
 export default {
@@ -36,7 +36,7 @@ export default {
 ```
 
 ### Example
-```
+```vue
 <template>
   <scroll-picker  
     :options="options" 
@@ -44,7 +44,7 @@ export default {
   />
 </template>
 ```
-```
+```vue
 <script>
 import { defineComponent, reactive, toRefs } from 'vue';
 const exampleOptions = [
