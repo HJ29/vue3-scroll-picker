@@ -66,7 +66,7 @@ interface Option {
 
 interface State {
   options: Option[][];
-  selections: string[];
+  selections: (string | null)[];
 }
 
 export default defineComponent({
