@@ -453,7 +453,10 @@ export default defineComponent({
       activeOptionHeight: 0
     });
     onMounted(() => {
-      state.isTouchable = matchMedia("(hover: none)").matches;
+      state.isTouchable = 
+        "ontouchstart" in window ||
+          navigator.maxTouchPoints > 0 ||
+          navigator.msMaxTouchPoints > 0;
       listenEvent(filterColumnsContent(state.columns));
     });
     onBeforeUnmount(() => {
