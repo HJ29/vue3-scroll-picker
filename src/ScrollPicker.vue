@@ -500,6 +500,14 @@ export default defineComponent({
   flex-wrap: nowrap;
   justify-content: center;
 }
+.column-content::-webkit-scrollbar {
+  width: 0px;
+  height: 5px;
+}
+.column-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
 .column-container {
   position: relative;
 }
@@ -563,13 +571,5 @@ export default defineComponent({
     rgba(255, 255, 255, 0),
     rgba(255, 255, 255, 1)
   );
-}
-::-webkit-scrollbar {
-  width: 0px;
-  height: 5px;
-}
-::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
 }
 </style>
