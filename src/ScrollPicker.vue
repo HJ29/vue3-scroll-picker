@@ -131,6 +131,10 @@ export default defineComponent({
     inactiveStyle: {
       default: "",
       type: String
+    },
+    wheelSpeed: {
+      default: 1,
+      type: Number
     }
   },
   emits: ["update:modelValue"],
@@ -263,7 +267,7 @@ export default defineComponent({
       preventDefault(event);
       const content = getContent(event);
       if (content) {
-        content.scrollTop += (event as WheelEvent).deltaY;
+        content.scrollTop += (event as WheelEvent).deltaY * props.wheelSpeed;
         const { columnIndex, rowIndex } = getColumnRowIndex(content);
         const newSelections = getSelections(columnIndex, rowIndex);
         setSelections(newSelections);

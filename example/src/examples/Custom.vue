@@ -1,6 +1,7 @@
 <template>
   <h3>Custom Example</h3 >
   <scroll-picker 
+    :wheel-speed="wheelSpeed"
     style="background: white; height: 200px;"
     :options="options" 
     v-model="selections"
@@ -23,6 +24,10 @@
   </scroll-picker>
   <div style="margin-top: 30px;">
     {{ selections }}
+  </div>
+  <div style="padding-top: 30px;">
+    <span style="font-size: 14px; padding-right: 10px;">Wheel Speed:</span>
+    <input v-model="wheelSpeed">
   </div>
   <button style="margin-top: 30px;" @click="onClickRandom">
     Random
@@ -83,11 +88,12 @@ export default defineComponent({
     const state = reactive({
       options: mockOptions,
       selections: ['a2','b2','c1'],
+      wheelSpeed: 1
     });
     function random(number: number) {
       return Math.floor(Math.random() * number);  
     }
-    function getValue(option) {
+    function getValue(option: any) {
       return typeof option === "string" ? option : option.value;
     }
     function onClickRandom() {
